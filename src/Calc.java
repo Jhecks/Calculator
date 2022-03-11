@@ -48,7 +48,7 @@ public class Calc {
 
     /**
      *
-     * @param input string in format: "{numeral} {symbol} {numeral}", numeral can be either arabic or romanic
+     * @param input string in format: "{numeral} {symbol} {numeral}", numeral can be either arabic or roman
      * @return result of calculating 2 numerals
      * @throws CalcException if string is invalid
      */

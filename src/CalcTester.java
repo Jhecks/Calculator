@@ -1,9 +1,5 @@
 import org.junit.*;
 import static org.junit.Assert.*;
-import org.junit.*;
-
-import java.io.ByteArrayInputStream;
-import java.io.InputStream;
 
 public class CalcTester {
 
@@ -11,8 +7,8 @@ public class CalcTester {
     public void testCalculatorExceptions() {
         String input = "10 + 0";
         try {
-            Calc calc = new Calc(input);
-            System.out.println(calc.getResult());
+            Calc calc = new Calc();
+            System.out.println(calc.getResult(input));
             fail();
         }
         catch (CalcException e) {
@@ -20,8 +16,8 @@ public class CalcTester {
         }
         input = "10 + 1 + 5";
         try {
-            Calc calc = new Calc(input);
-            System.out.println(calc.getResult());
+            Calc calc = new Calc();
+            System.out.println(calc.getResult(input));
             fail();
         }
         catch (CalcException e) {
@@ -29,8 +25,8 @@ public class CalcTester {
         }
         input = "V - V";
         try {
-            Calc calc = new Calc(input);
-            System.out.println(calc.getResult());
+            Calc calc = new Calc();
+            System.out.println(calc.getResult(input));
             fail();
         }
         catch (CalcException e) {
@@ -38,8 +34,8 @@ public class CalcTester {
         }
         input = "V - VI";
         try {
-            Calc calc = new Calc(input);
-            System.out.println(calc.getResult());
+            Calc calc = new Calc();
+            System.out.println(calc.getResult(input));
             fail();
         }
         catch (CalcException e) {
@@ -47,13 +43,32 @@ public class CalcTester {
         }
         input = "V + V - V";
         try {
-            Calc calc = new Calc(input);
-            System.out.println(calc.getResult());
+            Calc calc = new Calc();
+            System.out.println(calc.getResult(input));
             fail();
         }
         catch (CalcException e) {
             //nothing to do
         }
+        input = "V + V - V";
+        try {
+            Calc calc = new Calc();
+            System.out.println(calc.getResult(input));
+            fail();
+        }
+        catch (CalcException e) {
+            //nothing to do
+        }
+        input = "V + 1";
+        try {
+            Calc calc = new Calc();
+            System.out.println(calc.getResult(input));
+            fail();
+        }
+        catch (CalcException e) {
+            //nothing to do
+        }
+
     }
 
     @Test
@@ -62,9 +77,9 @@ public class CalcTester {
             for (int j = 1; j <= 10; j++) {
                 String input = i + " " + "+" + " " + j;
                 try {
-                    Calc calc = new Calc(input);
-                    assertEquals(String.valueOf(i + j), calc.getResult());
-                    System.out.println(i + " + " + j + " = " + calc.getResult());
+                    Calc calc = new Calc();
+                    assertEquals(String.valueOf(i + j), calc.getResult(input));
+                    System.out.println(i + " + " + j + " = " + calc.getResult(input));
                 }
                 catch (Exception e) {
                     //
@@ -75,9 +90,9 @@ public class CalcTester {
             for (int j = 1; j <= 10; j++) {
                 String input = i + " " + "*" + " = " + j;
                 try {
-                    Calc calc = new Calc(input);
-                    assertEquals(String.valueOf(i * j), calc.getResult());
-                    System.out.println(i + " * " + j + " = " + calc.getResult());
+                    Calc calc = new Calc();
+                    assertEquals(String.valueOf(i * j), calc.getResult(input));
+                    System.out.println(i + " * " + j + " = " + calc.getResult(input));
                 }
                 catch (Exception e) {
                     //
@@ -88,9 +103,9 @@ public class CalcTester {
             for (int j = 1; j <= 10; j++) {
                 String input = i + " " + "-" + " " + j;
                 try {
-                    Calc calc = new Calc(input);
-                    assertEquals(String.valueOf(i - j), calc.getResult());
-                    System.out.println(i + " - " + j + " = " + calc.getResult());
+                    Calc calc = new Calc();
+                    assertEquals(String.valueOf(i - j), calc.getResult(input));
+                    System.out.println(i + " - " + j + " = " + calc.getResult(input));
                 }
                 catch (Exception e) {
                     //
@@ -101,9 +116,9 @@ public class CalcTester {
             for (int j = 1; j <= 10; j++) {
                 String input = i + " " + "/" + " " + j;
                 try {
-                    Calc calc = new Calc(input);
-                    assertEquals(String.valueOf(i / j), calc.getResult());
-                    System.out.println(i + " / " + j + " = " + calc.getResult());
+                    Calc calc = new Calc();
+                    assertEquals(String.valueOf(i / j), calc.getResult(input));
+                    System.out.println(i + " / " + j + " = " + calc.getResult(input));
                 }
                 catch (Exception e) {
                     //
@@ -117,9 +132,9 @@ public class CalcTester {
             for (int j = 1; j <= 10; j++) {
                 String input = RomanNumeral.findRomanNumeral(i) + " " + "+" + " " + RomanNumeral.findRomanNumeral(j);
                 try {
-                    Calc calc = new Calc(input);
-                    assertEquals(String.valueOf(RomanNumeral.findRomanNumeral(i + j)), calc.getResult());
-                    System.out.println(RomanNumeral.findRomanNumeral(i) + " + " + RomanNumeral.findRomanNumeral(j) + " = " + calc.getResult());
+                    Calc calc = new Calc();
+                    assertEquals(String.valueOf(RomanNumeral.findRomanNumeral(i + j)), calc.getResult(input));
+                    System.out.println(RomanNumeral.findRomanNumeral(i) + " + " + RomanNumeral.findRomanNumeral(j) + " = " + calc.getResult(input));
                 }
                 catch (Exception e) {
                     //
@@ -130,9 +145,9 @@ public class CalcTester {
             for (int j = 1; j <= 10; j++) {
                 String input = RomanNumeral.findRomanNumeral(i) + " " + "-" + " " + RomanNumeral.findRomanNumeral(j);
                 try {
-                    Calc calc = new Calc(input);
-                    assertEquals(String.valueOf(RomanNumeral.findRomanNumeral(i - j)), calc.getResult());
-                    System.out.println(RomanNumeral.findRomanNumeral(i) + " - " + RomanNumeral.findRomanNumeral(j) + " = " + calc.getResult());
+                    Calc calc = new Calc();
+                    assertEquals(String.valueOf(RomanNumeral.findRomanNumeral(i - j)), calc.getResult(input));
+                    System.out.println(RomanNumeral.findRomanNumeral(i) + " - " + RomanNumeral.findRomanNumeral(j) + " = " + calc.getResult(input));
                 }
                 catch (Exception e) {
                     //
@@ -143,9 +158,9 @@ public class CalcTester {
             for (int j = 1; j <= 10; j++) {
                 String input = RomanNumeral.findRomanNumeral(i) + " " + "*" + " " + RomanNumeral.findRomanNumeral(j);
                 try {
-                    Calc calc = new Calc(input);
-                    assertEquals(String.valueOf(RomanNumeral.findRomanNumeral(i * j)), calc.getResult());
-                    System.out.println(RomanNumeral.findRomanNumeral(i) + " * " + RomanNumeral.findRomanNumeral(j) + " = " + calc.getResult());
+                    Calc calc = new Calc();
+                    assertEquals(String.valueOf(RomanNumeral.findRomanNumeral(i * j)), calc.getResult(input));
+                    System.out.println(RomanNumeral.findRomanNumeral(i) + " * " + RomanNumeral.findRomanNumeral(j) + " = " + calc.getResult(input));
                 }
                 catch (Exception e) {
                     //
@@ -156,9 +171,9 @@ public class CalcTester {
             for (int j = 1; j <= 10; j++) {
                 String input = RomanNumeral.findRomanNumeral(i) + " " + "/" + " " + RomanNumeral.findRomanNumeral(j);
                 try {
-                    Calc calc = new Calc(input);
-                    assertEquals(String.valueOf(RomanNumeral.findRomanNumeral(i / j)), calc.getResult());
-                    System.out.println(RomanNumeral.findRomanNumeral(i) + " / " + RomanNumeral.findRomanNumeral(j) + " = " + calc.getResult());
+                    Calc calc = new Calc();
+                    assertEquals(String.valueOf(RomanNumeral.findRomanNumeral(i / j)), calc.getResult(input));
+                    System.out.println(RomanNumeral.findRomanNumeral(i) + " / " + RomanNumeral.findRomanNumeral(j) + " = " + calc.getResult(input));
                 }
                 catch (Exception e) {
                     //

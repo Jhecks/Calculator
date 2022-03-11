@@ -9,14 +9,13 @@ public class Calc {
     private String[] inputArr;
     private String result = null;
 
-    public Calc (String input) throws CalcException {
-        this.inputArr = input.split(" ");
-        if (!verify())
-            throw new CalcException("Wrong string input");
-    }
+    public Calc () {}
 
-    //main method to calculate result
-    public void calculate() throws CalcException {
+    /**
+     *
+     * @throws CalcException shouldn't be reachable, as it is checked before, but still
+     */
+    private void calculate() throws CalcException {
         switch (inputArr[1]) {
             case "+":
                 result = Processor.process(inputArr[0], inputArr[2], OperationType.PLUS);
@@ -35,18 +34,28 @@ public class Calc {
         }
     }
 
-
-    //method to half verify input data. it is checking if arr is [number, operation, number]
-    //but there can be different types of numbers
+    /**
+     * method to half verify input data. it is checking if arr is ["{numeral}", "{symbol}", "{numeral}"]
+     * but there can be different types of numbers
+     * @return true if array of strings was valid
+     */
     private boolean verify() {
-
         return inputArr.length == 3
                 && (numerals.contains(inputArr[0]) || RomanNumeral.contains(inputArr[0]))
                 && operations.contains(inputArr[1])
                 && (numerals.contains(inputArr[2]) || RomanNumeral.contains(inputArr[2]));
     }
 
-    public String getResult() throws CalcException {
+    /**
+     *
+     * @param input string in format: "{numeral} {symbol} {numeral}", numeral can be either arabic or romanic
+     * @return result of calculating 2 numerals
+     * @throws CalcException if string is invalid
+     */
+    public String getResult(String input) throws CalcException {
+        this.inputArr = input.split(" ");
+        if (!verify())
+            throw new CalcException("Wrong string input");
         calculate();
         return result;
     }

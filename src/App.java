@@ -5,9 +5,9 @@ public class App {
     public static void main (String[] args) {
         Scanner scanner = new Scanner(System.in);
         String input = scanner.nextLine();
+        Calc calc = new Calc();
         try {
-            Calc calc = new Calc(input);
-            System.out.println(calc.getResult());
+            System.out.println(calc.getResult(input));
         }
         catch (CalcException e) {
             System.out.println(e.getMessage());

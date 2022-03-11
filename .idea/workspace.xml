@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aaf398c9-fdfb-4086-9796-647619b26486" name="Changes" comment="" />
+    <list default="true" id="aaf398c9-fdfb-4086-9796-647619b26486" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/hamcrest-core-1.3.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libs/junit-4.12.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Calc.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/CalcTester.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/OperationType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Processor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/RomanNumeral.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Calc.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Calc.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ArabicCalc.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Calculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/RomanCalc.java" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,20 +40,75 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="266Mu6R6UOVmrMpr7PlqjZbjI8M" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <module name="Calc" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Calculator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Calculator" />
+      <module name="Calc" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Expression" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Expression" />
+      <module name="Calc" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalcTester" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calc" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalcTester" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CalcTester.testInputParse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Calc" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CalcTester" />
+      <option name="METHOD_NAME" value="testInputParse" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.App" />
+        <item itemvalue="Application.Calculator" />
+        <item itemvalue="JUnit.CalcTester.testInputParse" />
+        <item itemvalue="JUnit.CalcTester" />
+        <item itemvalue="Application.Expression" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -49,10 +120,30 @@
       <updated>1646739803635</updated>
       <workItem from="1646739804808" duration="50000" />
       <workItem from="1646827881758" duration="40000" />
+      <workItem from="1646828484954" duration="6636000" />
+      <workItem from="1646898410716" duration="2174000" />
+      <workItem from="1646912987313" duration="594000" />
+      <workItem from="1646987863711" duration="595000" />
+      <workItem from="1646990002334" duration="9636000" />
+      <workItem from="1647000737077" duration="5285000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/App.java</url>
+          <line>9</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

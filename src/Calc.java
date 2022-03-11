@@ -12,7 +12,7 @@ public class Calc {
     public Calc (String input) throws CalcException {
         this.inputArr = input.split(" ");
         if (!verify())
-            throw new CalcException("Wrong string input", input);
+            throw new CalcException("Wrong string input");
     }
 
     //main method to calculate result
@@ -31,7 +31,7 @@ public class Calc {
                 result = Processor.process(inputArr[0], inputArr[2], OperationType.DIVIDE);
                 break;
             default:
-                throw new CalcException("Wrong operation", inputArr[1]);
+                throw new CalcException("Wrong operation");
         }
     }
 
@@ -49,18 +49,5 @@ public class Calc {
     public String getResult() throws CalcException {
         calculate();
         return result;
-    }
-}
-
-class CalcException extends Exception{
-
-    private String str;
-    public CalcException(String message, String str){
-        super(message);
-        this.str = str;
-    }
-
-    public String getString() {
-        return str;
     }
 }

@@ -15,11 +15,13 @@ public enum OperationType {
         }
     },
     DIVIDE{
-        int apply(int x, int y) {
+        int apply(int x, int y) throws CalcException {
+            if (y == 0)
+                throw new CalcException("Zero dividing");
             return x / y;
         }
     };
 
-    abstract int apply(int x, int y);
+    abstract int apply(int x, int y) throws CalcException;
 
 }
